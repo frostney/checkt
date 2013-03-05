@@ -1,6 +1,8 @@
 checkt
 ======
 
+[![Build Status](https://travis-ci.org/Stoney-FD/checkt.png?branch=master)](https://travis-ci.org/Stoney-FD/checkt)
+
 What is it?
 -----------
 
