@@ -1,6 +1,12 @@
 {
   "name": "checkt",
   "version": "1.0.0",
+  "description": "Safe (chainable) type checks",
+  "main": "js/checkt.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/Stoney-FD/checkt.git"
+  },
   "devDependencies": {
     "flour": "*",
     "uglify-js": "*",
