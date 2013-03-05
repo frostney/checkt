@@ -25,21 +25,21 @@ __JavaScript__
 ```javascript
 // Method chaining examples
 check('test').not.string(function() {
-  return console.log('not a string');
-})["else"](function() {
-  return console.log('Logically, should be a string');
+ console.log('not a string');
+}).otherwise(function() {
+ console.log('Logically, should be a string');
 }).number(function(v) {
-  return console.log("its a number with value: " + v);
+ console.log("its a number with value: " + v);
 });
 
 // Instead of using method chaing, you can also use
 // a plain object with the type as the key and the value is the callback function
 check({}, {
   object: function() {
-    return console.log('Is an object');
+   console.log('Is an object');
   },
   number: function() {
-    return console.log('Is a number');
+   console.log('Is a number');
   }
 });
 
@@ -47,7 +47,7 @@ check({}, {
 // written as a key
 check('test', {
   'string, number': function() {
-    return console.log('Either string or number');
+   console.log('Either string or number');
   }
 });
 ```
