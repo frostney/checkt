@@ -1,0 +1,15 @@
+{
+  "name": "checkt",
+  "version": "1.0.0",
+  "devDependencies": {
+    "flour": "*",
+    "uglify-js": "*",
+    "coffee-script": "*",
+    "jshint": "*",
+    "mocha": "*",
+    "chai": "*"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha ."
+  }
+}
