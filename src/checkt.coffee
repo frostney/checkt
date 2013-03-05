@@ -32,6 +32,7 @@ do (root = exports ? this) ->
       null: (cb) -> checkType 'null', cb, inverse
       string: (cb) -> checkType 'string', cb, inverse
       number: (cb) -> checkType 'number', cb, inverse
+      boolean: (cb) -> checkType 'boolean', cb, inverse
       object: (cb) -> checkType 'object', cb, inverse
       array: (cb) -> checkType 'array', cb, inverse
       function: (cb) -> checkType 'function', cb, inverse
