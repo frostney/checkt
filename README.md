@@ -30,26 +30,9 @@ check('test').not.string(function() {
   return console.log("its a number with value: " + v);
 });
 
-check({}).object(function() {
-  return console.log('Is an object');
-})["else"](function() {
-  return console.log('Not an object');
-})["else"](function() {
-  return console.log('Maybe an object');
-});
-
 // Instead of using method chaing, you can also use
 // a plain object with the type as the key and the value is the callback function
 check({}, {
-  object: function() {
-    return console.log('Is an object');
-  },
-  number: function() {
-    return console.log('Is a number');
-  }
-});
-
-check(8, {
   object: function() {
     return console.log('Is an object');
   },
@@ -76,18 +59,9 @@ check('test')
   .else(-> console.log 'Logically, should be a string')
   .number((v) -> console.log("its a number with value: #{v}"))
 
-check({})
-  .object(-> console.log 'Is an object')
-  .else(-> console.log 'Not an object')
-  .else(-> console.log 'Maybe an object')
-
 # Instead of using method chaing, you can also use
 # a plain object with the type as the key and the value is the callback function
 check {},
-  object: -> console.log 'Is an object'
-  number: -> console.log 'Is a number'
-
-check 8,
   object: -> console.log 'Is an object'
   number: -> console.log 'Is a number'
 
