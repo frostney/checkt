@@ -47,25 +47,28 @@
             return this;
           },
           undefined: function(cb) {
-            return checkType("undefined", cb, inverse);
+            return checkType('undefined', cb, inverse);
           },
           "null": function(cb) {
-            return checkType("null", cb, inverse);
+            return checkType('null', cb, inverse);
           },
           string: function(cb) {
-            return checkType("string", cb, inverse);
+            return checkType('string', cb, inverse);
           },
           number: function(cb) {
-            return checkType("number", cb, inverse);
+            return checkType('number', cb, inverse);
+          },
+          boolean: function(cb) {
+            return checkType('boolean', cb, inverse);
           },
           object: function(cb) {
-            return checkType("object", cb, inverse);
+            return checkType('object', cb, inverse);
           },
           array: function(cb) {
-            return checkType("array", cb, inverse);
+            return checkType('array', cb, inverse);
           },
           "function": function(cb) {
-            return checkType("function", cb, inverse);
+            return checkType('function', cb, inverse);
           }
         };
       };
