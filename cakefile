@@ -1,0 +1,37 @@
+flour = require 'flour'
+path = require 'path'
+fs = require 'fs'
+
+# Constants
+COFFEE = 'coffee'
+MINIFIER = 'uglifyjs'
+
+SOURCE = 'src'
+OUTPUT = 'js'
+
+LIB_NAME = 'checkt'
+
+SRC_FILE = "#{LIB_NAME}.coffee"
+TARGET = "#{LIB_NAME}.js"
+TARGET_MIN = "#{LIB_NAME}.min.js"
+
+TEST = 'test'
+
+task 'build', ->  
+  compile path.join(SOURCE, SRC_FILE), path.join(OUTPUT, TARGET), ->
+    minify path.join(OUTPUT, TARGET), path.join(OUTPUT, TARGET_MIN)  
+
+deleteFile = (filename) ->
+  return unless fs.existsSync filename
+  
+  fs.unlink filename, (err) ->
+    if err
+      console.log "Error while deleting #{filename}: #{err}"
+      return
+    
+    console.log "Sucessfully deleted #{filename}"
+
+deleteFiles = (files) ->
+  deleteFile file for file in files
+
+task 'clean', -> deleteFiles [path.join(OUTPUT, TARGET), path.join(OUTPUT, TARGET_MIN)]
