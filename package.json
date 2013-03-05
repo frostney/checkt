@@ -17,5 +17,18 @@
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha -R spec"
-  }
+  },
+  "readmeFilename": "README.md",
+  "gitHead": "99aab1bbdba6a0913d1567d5175fc5304d8d0e2b",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "keywords": [
+    "type",
+    "checks",
+    "chainable"
+  ],
+  "author": "Johannes Stein",
+  "license": "Public domain"
 }
