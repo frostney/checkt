@@ -17,9 +17,16 @@ TARGET_MIN = "#{LIB_NAME}.min.js"
 
 TEST = 'test'
 
-task 'build', ->  
+task 'build:checkt', ->  
   compile path.join(SOURCE, SRC_FILE), path.join(OUTPUT, TARGET), ->
     minify path.join(OUTPUT, TARGET), path.join(OUTPUT, TARGET_MIN)  
+
+task 'build:tests', ->
+  compile path.join(TEST, 'tests.coffee'), path.join(TEST, 'tests.js'), ->
+
+task 'build', ->
+  invoke 'build:checkt'
+  invoke 'build:tests'
 
 deleteFile = (filename) ->
   return unless fs.existsSync filename
