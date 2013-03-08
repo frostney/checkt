@@ -44,7 +44,7 @@ check({}, {
 });
 
 // Multiple keys seperated by a comma also work, just make sure the key is
-// written as a key
+// written as a string
 check('test', {
   'string, number': function() {
    console.log('Either string or number');
@@ -68,7 +68,7 @@ check {},
   number: -> console.log 'Is a number'
 
 # Multiple keys seperated by a comma also work, just make sure the key is
-# written as a key
+# written as a string
 check 'test',
   'string, number': -> console.log 'Either string or number'
 ```
