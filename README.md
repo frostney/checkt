@@ -17,7 +17,7 @@ Currently supported are:
 The checkt library exposes the checkt function. (An alias is the check object,
 which has exactly the same functionality.)
 
-__Browser__
+__Browser__  
 Embed `js/checkt.js` in your HTML file for development purposes and 
 `js/checkt.min.js` for production use.
 
