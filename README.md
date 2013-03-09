@@ -17,9 +17,9 @@ Currently supported are:
 The checkt library exposes the checkt function. (An alias is the check object,
 which has exactly the same functionality.)
 
-__Node.js__
-Either use install using
-`npm install checkt`
+__Node.js__  
+Either use install using  
+`npm install checkt`  
 or add `checkt` to to the package.json of your project.
 
 Usage
