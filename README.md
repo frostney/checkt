@@ -86,4 +86,4 @@ check 'test',
 License
 -------
 
-checkt is practically public domain. See __UNLICENSE.md__ for more information.
+checkt is public domain. See __UNLICENSE.md__ for more information.
