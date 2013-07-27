@@ -2,6 +2,8 @@ checkt
 ======
 
 [![Build Status](https://travis-ci.org/Stoney-FD/checkt.png?branch=master)](https://travis-ci.org/Stoney-FD/checkt)
+[![Dependency Status](https://david-dm.org/Stoney-FD/checkt.png)](https://david-dm.org/Stoney-FD/checkt)
+[![devDependency Status](https://david-dm.org/Stoney-FD/checkt/dev-status.png)](https://david-dm.org/Stoney-FD/checkt#info=devDependencies)
 
 What is it?
 -----------
