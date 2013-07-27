@@ -1,5 +1,8 @@
 module.exports = (grunt) ->
   
+  date = grunt.template.today('dd-mm-yyyy')
+  banner = '/*! <%= pkg.name %> - v<%= pkg.version %> - <%= date %> */\n'
+  
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
     coffee:
@@ -11,9 +14,9 @@ module.exports = (grunt) ->
           'test/tests.js': ['test/tests.coffee']
     uglify:
       options:
-        banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+        banner: banner
         report: 'gzip'
-      dist: 
+      dist:
         files:
           'dist/<%= pkg.name %>.min.js': ['dist/<%= pkg.name %>.js']
     mochaTest:

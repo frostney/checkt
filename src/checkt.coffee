@@ -3,12 +3,12 @@
 check = (variable, checkObject) ->
 
   stringedVar = {}.toString.call variable
-  typeName = stringedVar.slice(8, stringedVar.length - 1).toLowerCase() 
+  typeName = stringedVar.slice(8, stringedVar.length - 1).toLowerCase()
 
   checkType = (typeString, cb, inverse) ->
     if inverse
       cb?(variable) unless typeName is typeString
-    else  
+    else
       cb?(variable) if typeName is typeString
 
     ###
@@ -17,12 +17,22 @@ check = (variable, checkObject) ->
       check(...).otherwise(...) is a better choice if using plain JavaScript
     ###
     unless checkObject
-      result.else = result.otherwise = (cb) -> checkType typeString, cb, !inverse
+      result.else = result.otherwise = (cb) ->
+        checkType typeString, cb, !inverse
       result
 
   types = (inverse) ->
     result = {}
-    typeArray = ['undefined', 'null', 'string', 'number', 'boolean', 'object', 'array', 'function']
+    typeArray = [
+      'undefined'
+      'null'
+      'string'
+      'number'
+      'boolean'
+      'object'
+      'array'
+      'function'
+    ]
     
     result.valid = (cb) ->
       if inverse
@@ -53,7 +63,8 @@ do (root = @) ->
   bindCheckToGlobal = -> root.check = root.checkt = check
   
   if root.udefine
-    checkWrapper = -> if udefine.env.browser then bindCheckToGlobal() else check
+    checkWrapper = ->
+      if udefine.env.browser then bindCheckToGlobal() else check
     
     udefine 'check', checkWrapper
     udefine 'checkt', checkWrapper
