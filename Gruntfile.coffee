@@ -1,9 +1,9 @@
 module.exports = (grunt) ->
   
-  date = grunt.template.today('dd-mm-yyyy')
   banner = '/*! <%= pkg.name %> - v<%= pkg.version %> - <%= date %> */\n'
   
   grunt.initConfig
+    date: grunt.template.today('dd-mm-yyyy')
     pkg: grunt.file.readJSON 'package.json'
     coffee:
       compile:
