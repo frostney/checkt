@@ -1,6 +1,6 @@
 {
   "name": "checkt",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Safe (chainable) type checks",
   "main": "js/checkt.js",
   "repository": {
@@ -8,9 +8,11 @@
     "url": "http://github.com/Stoney-FD/checkt.git"
   },
   "devDependencies": {
-    "flour": "*",
-    "uglify-js": "*",
-    "coffee-script": "*",
+    "grunt": "0.4.x",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-mocha-test": "*",
+    "grunt-coffeelint": "*",
     "jshint": "*",
     "mocha": "*",
     "chai": "*"
