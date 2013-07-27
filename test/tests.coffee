@@ -1,4 +1,4 @@
-checkObj = require '../js/checkt'
+checkObj = require '../dist/checkt'
 {check, checkt} = checkObj
 
 {expect} = require 'chai'

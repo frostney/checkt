@@ -1,4 +1,4 @@
-{check} = require '../../js/checkt'
+{check} = require '../../dist/checkt'
 
 # Method chaining examples
 check('test')

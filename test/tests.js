@@ -1,7 +1,7 @@
 (function() {
   var check, checkObj, checkt, expect;
 
-  checkObj = require('../js/checkt');
+  checkObj = require('../dist/checkt');
 
   check = checkObj.check, checkt = checkObj.checkt;
 
