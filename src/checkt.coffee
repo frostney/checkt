@@ -40,17 +40,18 @@ check = (variable, checkObject) ->
       else
         cb?(variable) if variable?
       @
-    (result[t] = (cb) -> checkType t, cb, inverse) for t in typeArray
+    for t in typeArray
+      result[t] = do (t = t) -> (cb) -> checkType t, cb, inverse
     result
 
   if checkObject
     typeFuncs = types(false)
-    for key, value of checkObject
+    for own key, value of checkObject
       if key.indexOf(',') > -1
         keyArray = key.split ','
         typeFuncs[k.trim()](value) for k in keyArray
       else
-        typeFuncs[key] value
+        typeFuncs[key.trim()] value
 
     result = undefined
   else
