@@ -62,7 +62,8 @@
 
 (function() {
   'use strict';
-  var check;
+  var check,
+    __hasProp = {}.hasOwnProperty;
 
   check = function(variable, checkObject) {
     var checkType, k, key, keyArray, result, stringedVar, typeFuncs, typeName, types, value, _i, _len;
@@ -117,15 +118,18 @@
       };
       for (_i = 0, _len = typeArray.length; _i < _len; _i++) {
         t = typeArray[_i];
-        result[t] = function(cb) {
-          return checkType(t, cb, inverse);
-        };
+        result[t] = (function(t) {
+          return function(cb) {
+            return checkType(t, cb, inverse);
+          };
+        })(t);
       }
       return result;
     };
     if (checkObject) {
       typeFuncs = types(false);
       for (key in checkObject) {
+        if (!__hasProp.call(checkObject, key)) continue;
         value = checkObject[key];
         if (key.indexOf(',') > -1) {
           keyArray = key.split(',');
@@ -134,7 +138,7 @@
             typeFuncs[k.trim()](value);
           }
         } else {
-          typeFuncs[key](value);
+          typeFuncs[key.trim()](value);
         }
       }
       result = void 0;
