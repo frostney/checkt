@@ -66,7 +66,10 @@ do (root = @) ->
     checkWrapper = ->
       if udefine.env.browser then bindCheckToGlobal() else check
     
-    udefine 'check', checkWrapper
+    # Register checkt module
     udefine 'checkt', checkWrapper
+    
+    # Register alternative module name
+    udefine 'check', checkWrapper
   else
     bindCheckToGlobal()
