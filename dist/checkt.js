@@ -56,7 +56,7 @@
       browser: false
     });
     return null;
-  })(hasModule ? typeof global !== "undefined" && global !== null ? global : this : void 0);
+  })(hasModule ? global : this);
 
 }).call(this);
 
@@ -158,8 +158,8 @@
           return check;
         }
       };
-      udefine('check', checkWrapper);
-      return udefine('checkt', checkWrapper);
+      udefine('checkt', checkWrapper);
+      return udefine('check', checkWrapper);
     } else {
       return bindCheckToGlobal();
     }
