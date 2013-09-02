@@ -1,6 +1,6 @@
 {
   "name": "checkt",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "dist/checkt.js",
   "ignore": [
     "**/.*",
@@ -11,6 +11,7 @@
     "src",
     "udefine",
     "examples",
-    "gruntfile.coffee"
+    "gruntfile.coffee",
+    "package.json"
   ]
 }

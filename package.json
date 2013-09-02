@@ -1,8 +1,8 @@
 {
   "name": "checkt",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Safe (chainable) type checks",
-  "main": "js/checkt.js",
+  "main": "dist/checkt.js",
   "repository": {
     "type": "git",
     "url": "http://github.com/Stoney-FD/checkt.git"
