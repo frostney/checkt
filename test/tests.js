@@ -1,6 +1,8 @@
 (function() {
   var check, checkObj, checkt, expect;
 
+  require('udefine');
+
   checkObj = require('../dist/checkt');
 
   check = checkObj.check, checkt = checkObj.checkt;
