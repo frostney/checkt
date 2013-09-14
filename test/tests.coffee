@@ -1,3 +1,5 @@
+require 'udefine'
+
 checkObj = require '../dist/checkt'
 {check, checkt} = checkObj
 
