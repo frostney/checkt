@@ -13,8 +13,6 @@
     "grunt-contrib-uglify": "*",
     "grunt-mocha-test": "*",
     "grunt-coffeelint": "*",
-    "jshint": "*",
-    "mocha": "*",
     "chai": "*"
   },
   "scripts": {
