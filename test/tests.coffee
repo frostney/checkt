@@ -1,4 +1,4 @@
-require 'udefine'
+require 'udefine/global'
 
 checkObj = require '../dist/checkt'
 {check, checkt} = checkObj
