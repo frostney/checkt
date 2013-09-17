@@ -34,6 +34,6 @@
   "author": "Johannes Stein",
   "license": "Public domain",
   "dependencies": {
-    "udefine": "~0.7.8"
+    "udefine": "~0.8.2"
   }
 }
