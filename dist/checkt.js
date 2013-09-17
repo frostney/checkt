@@ -4,11 +4,7 @@
       var name, _i, _len;
       for (_i = 0, _len = names.length; _i < _len; _i++) {
         name = names[_i];
-        this.globals[name.toLowerCase()] = root[name];
-        this.inject[name.toLowerCase()] = {
-          name: name,
-          root: root
-        };
+        this.inject.add([name.toLowerCase()]);
       }
       return null;
     });
