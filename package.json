@@ -1,6 +1,6 @@
 {
   "name": "checkt",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Safe (chainable) type checks",
   "main": "dist/checkt.js",
   "repository": {
