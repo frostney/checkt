@@ -4,7 +4,7 @@
       var name, _i, _len;
       for (_i = 0, _len = names.length; _i < _len; _i++) {
         name = names[_i];
-        this.inject.add([name.toLowerCase()]);
+        udefine.inject.add([name.toLowerCase()]);
       }
       return null;
     });
